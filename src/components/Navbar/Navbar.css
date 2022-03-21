@@ -9,7 +9,7 @@
   height: 8vh;
 }
 .log {
-  border-radius: 50%;
+  border-radius: 20%;
 }
 .nav-link {
   color: #f21f1f !important;
@@ -30,9 +30,6 @@
   text-decoration: none;
 }
 
-.log {
-  border-radius: 50%;
-}
 
 .bl {
   color: #f21f1f !important;

@@ -8,8 +8,17 @@ import { withRouter } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLanguage } from "./../../Store/actions/language";
+
 
 function Nav(props) {
+  const lang = useSelector((state) => state.language.lang);
+  const dispatch = useDispatch();
+  const changeLanguageFunc = () => {
+    dispatch(changeLanguage(lang === "ar" ? "en" : "ar"));
+  };
+  const language = useSelector((state) =>state.language.lang);
   const logout = () => {
     sessionStorage.clear();
     props.history.push("/trackyourshipment");
@@ -19,13 +28,22 @@ function Nav(props) {
       <Navbar bg="light" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <img
-          src={require("../image/logo.jpg")}
+          src={require("./image/logo.jpg")}
           alt="logo.img"
           className="log  ms-2"
           style={{ width: "10rem" }}
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <ul className="navbar-nav mb-2  spacel  ml-auto">
+
+          <li className="nav-item">
+              <NavLink className="nav nav-link pink bl" to="/trackyourshipment"
+              onClick={() => changeLanguageFunc()}>
+              {language}
+              </NavLink>
+              </li>  
+
+
             <li className="nav-item">
               <NavLink className="nav nav-link pink bl" to="/trackyourshipment">
                 Home
@@ -89,6 +107,9 @@ function Nav(props) {
 
 
 
+           
+
+             
 
 
             </NavDropdown> 
