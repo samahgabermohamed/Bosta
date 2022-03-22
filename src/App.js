@@ -8,6 +8,10 @@ import Nav from "./components/Navbar/Navbar";
 // import {Contactsales} from "./Pages/Contactsales";
 // import {Careers} from "./Pages/Careers";
 import Trackyourshipment from "./pages/Trackyourshipment";
+import Tracklist from "./pages/Tracklist";
+// import Trackdetails from "./pages/Trackdetails";
+
+
 import { useSelector } from "react-redux";
 // import Login from "./Pages/login";
 // import { Footer } from "./components/Footer";
@@ -29,6 +33,10 @@ function App() {
             <Route path="/contactsales" exact component={Contactsales} />
             <Route path="/careers" exact component={Careers} /> */}
             <Route path="/trackyourshipment" exact component={Trackyourshipment} />
+            <Route path={"/tracklist"} exact component={Tracklist} />
+            {/* <Route path="/trackdetails" exact component={Trackdetails} /> */}
+            {/* <Route path={"/trackdetails/:id"} exact component={Trackdetails} /> */}
+
             {/* <Route path="/login" exact component={Login} /> */}
           </Switch>
           {/* <Footer /> */}
