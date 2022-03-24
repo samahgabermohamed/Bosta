@@ -1,15 +1,13 @@
-import axios from 'axios';
-import React, { useState} from 'react';
 import  Trackdetails from '../pages/Trackdetails';
 
-export default function Tracklist() {
-   const [traackingNumber , settraackingNumber] = useState([])
-   const [tNumber , settNumber] = useState('');
-   const [setsearchmode] = useState(false);
-   const [change , setchange] = useState([])
-   const [setnotfound] = useState()
+ export default function Tracklist() {
+     const [traackingNumber , settraackingNumber] = useState([])
+     const [tNumber , settNumber] = useState('');
+     const [setsearchmode] = useState(false);
+     const [change , setchange] = useState([])
+     const [setnotfound] = useState()
 
-   function ischange(e){
+    function ischange(e){
      console.log("samah")
     setchange([...change , e])
    }
@@ -17,20 +15,24 @@ export default function Tracklist() {
   function getnumber(e){
     settNumber(e.target.value)
   }
-        function search(e) {
+  // function search(e){
+  //   e.preventDefault();
+  //   setsearchmode(true)
+    // axios.get(`https://tracking.bosta.co/shipments/track/${tNumber}`).then(
+    
+
+      function search(e) {
         e.preventDefault();
         return fetch(`https://tracking.bosta.co/shipments/track/${tNumber}`)
         .then(response => response.json())
         .then((jsonData) => {
           // jsonData is parsed json object received from url
           console.log(jsonData)
-          
         })
         .catch((error) => {
           // handle your errors here
           console.error(error)
         })
-        
       
 
 //       res => {
@@ -49,16 +51,18 @@ export default function Tracklist() {
 //   )
 //   console.log(e)
   }
-
+  function JsonDataDisplay(){
+    const DisplayData=JsonData.map(
+        (tNumber)=>{
   return (
-      <>   
-     {/* <h1 className='m-3'> tracking Number</h1> */}
+    <>   
+   {/* <h1 className='m-3'> tracking Number</h1> */}
 
-    <div className="container">
+  <div className="container">
 
-<div className="input-group mb-3">
-  <form className='col-10' onSubmit={(e)=> {search(e)}}>
-     <input type="Number" value={tNumber} name='tNumber' onChangeCapture={(e)=> getnumber(e)} 
+  <div className="input-group mb-3">
+<form className='col-10' onSubmit={(e)=> {search(e)}}>
+   <input type="Number" value={tNumber} name='tNumber' onChangeCapture={(e)=> getnumber(e)} 
      className="form-control" placeholder="enter your tracking Number" 
      aria-label="Recipient's username" aria-describedby="basic-addon2"/>
       <div className="input-group-append">
@@ -67,23 +71,208 @@ export default function Tracklist() {
   </form>
 
 </div> 
-      {/* <div className='row'>
+    {/* <div className='row'>
+   {   
+       traackingNumber.map( traackNumber => {      
+         return ( <>
+            <Trackdetails changed={(e)=> ischange(e)}  key={traackNumber.id} id={traackNumber.id}
+             timestamp={traackNumber.timestamp}  PromisedDate={traackNumber.PromisedDate} state={traackNumber.state}
+             />
+            </>
+         )
+       })
+   }
+ </div> */}
+ </div>
 
-     {   
-         traackingNumber.map( traackNumber => {      
-           return ( <>
-              <Trackdetails changed={(e)=> ischange(e)}  key={traackNumber.id} id={traackNumber.id}
-               timestamp={traackNumber.timestamp}  PromisedDate={traackNumber.PromisedDate} state={traackNumber.state}
-               />
-              </>
-           )
-         })
-     }
-   </div> */}
-   </div>
-
-  </>)
+</>)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { usestate, useEffect } from "react";
+// import axios from "axios";
+
+// function Tracklist(){
+//   const [data, setData] = usestate([]);
+
+//   useEffect(() => {
+//     loadUsersData();
+//   },[]);
+//   const loadUsersData = async () => {
+//     return await axios
+//     .get("https://tracking.bosta.co/shipments/track/${tNumber}")
+//     .then((Response) => setData(Response.data))
+//     .catch((err) => console.log(err));
+//   };
+//   return (
+    
+//   )
+//   console.log("data", data);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import axios from 'axios';
+// import React, { useState} from 'react';
+// import  Trackdetails from '../pages/Trackdetails';
+
+// export default function Tracklist() {
+//    const [traackingNumber , settraackingNumber] = useState([])
+//    const [tNumber , settNumber] = useState('');
+//    const [setsearchmode] = useState(false);
+//    const [change , setchange] = useState([])
+//    const [setnotfound] = useState()
+
+//    function ischange(e){
+//      console.log("samah")
+//     setchange([...change , e])
+//    }
+
+//   function getnumber(e){
+//     settNumber(e.target.value)
+//   }
+//         function search(e) {
+//         e.preventDefault();
+//         return fetch(`https://tracking.bosta.co/shipments/track/${tNumber}`)
+//         .then(response => response.json())
+//         .then((jsonData) => {
+//           // jsonData is parsed json object received from url
+//           console.log(jsonData)
+          
+//         })
+//         .catch((error) => {
+//           // handle your errors here
+//           console.error(error)
+//         })
+        
+      
+
+//       res => {
+//         settraackingNumber(res.data.results)
+//         console.log(res.data.results)
+//         if (res.data.results.length === 0){
+//           setnotfound(true)
+//           console.log(e)
+
+//         } else {
+//           setnotfound(false)
+//           console.log(e)
+
+//         }
+//       }
+//   )
+//   console.log(e)
+  // }
+
+  // return (
+  //     <>   
+//      {/* <h1 className='m-3'> tracking Number</h1> */}
+
+//     {/* <div className="container">
+
+// <div className="input-group mb-3">
+//   <form className='col-10' onSubmit={(e)=> {search(e)}}>
+//      <input type="Number" value={tNumber} name='tNumber' onChangeCapture={(e)=> getnumber(e)} 
+//      className="form-control" placeholder="enter your tracking Number" 
+//      aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+//       <div className="input-group-append">
+//     <button className="btn btn-outline-secondary mt-2"  type="submit">Search</button>
+//   </div>
+//   </form>
+
+//    </div>  */}
+
+//      {/* <div>
+//   {traackingNumber.map( traackNumber => {      
+//           return ( <>
+//               <Trackdetails changed={(e)=> ischange(e)}  key={traackNumber.id} id={traackNumber.id}
+//            CreateDate={traackNumber.CreateDate} 
+//           CurrentStatus={traackNumber.CurrentStatus} 
+//             SupportPhoneNumbers={traackNumber.SupportPhoneNumbers}  TrackingNumber={traackNumber.TrackingNumber} 
+//           rackingURL={traackNumber.TrackingURL} TransitEvents={traackNumber.TransitEvents}
+//              />
+//               </>
+//            )
+//       })
+//     }
+//  </div> */}
+//    {/* </div>
+
+//   </>)
+// } 
+//   */}
 
 
 
