@@ -119,7 +119,7 @@ return (
         <h5 className="card-title text-lg-end">عنوان التسليم</h5>
       <p className="card-text mb-5 text-lg-end">cairo ...امبابة شارع طلعت حرب مدينة العمال بجوارالبرنس منزل 17 بلوك 33</p>
       <p className="card-text mb-5 text-lg-end">هل توجد مشكلة في شحنتك </p>
-        <button className="btn-outline-light butt">
+        <button   className="btn-outline-light mb-5 butt">
             <NavLink className="nav nav-link active " exact to={"/tracklist"}>
             ابلاغ عن مشكلة
             </NavLink>
