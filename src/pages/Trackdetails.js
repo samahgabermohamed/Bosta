@@ -25,6 +25,52 @@ export default function Trackdetails (props) {
 
 
 
+// import React from 'react';
+
+// // 
+// // import { useParams } from "react-router-dom";
+// import { useEffect, useState } from "react";
+// // 
+
+// export default function Trackdetails (props) {
+
+
+//   const [trackdetails, setDetails] = useState({});
+//   // console.log(params);
+//   fetch("https://tracking.bosta.co/shipments/track/${tNumber}")
+
+//     // =================
+   
+//     .get("${tNumber}", {
+//       headers: {
+//         "Accept-language": "ar",
+//       },
+//     })
+//     // =====================
+
+
+//     .then(response => response.json())
+//     .then((jsonData) => {
+//       // jsonData is parsed json object received from url
+//       console.log(jsonData)
+
+//     })
+//     .catch((error) => {
+//       // handle your errors here
+//       console.error(error)
+//     })
+
+//     return (
+//     <div>
+//       <h1>Details</h1>
+//       <h3>CurrentStatus : {trackdetails.CurrentStatus}</h3>
+//       <h3>timestamp : {trackdetails.timestamp}</h3>
+//       <h3>SupportPhoneNumbers : {trackdetails.SupportPhoneNumbers}</h3>
+    
+//     </div>
+//   );
+// }
+
 
 
 
