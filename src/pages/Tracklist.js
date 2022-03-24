@@ -75,7 +75,7 @@ return (
     <>   
        {/* <h1 className='m-3'> tracking Number</h1> */}
     
-        <div className="container">
+        <div className="container mb-5">
     
     <div className="input-group mb-3">
       <form className='col-10' onSubmit={(e)=> {search(e)}}>
@@ -89,6 +89,7 @@ return (
     </div>   
        </div>
     
+
        <div className="container-sm mb-5">
   <Table responsive="sm ">
     <tbody>
@@ -109,7 +110,6 @@ return (
   </Table>
 </div>
 
-<hr className="fw-bolder "></hr>
 
 <div className="container-sm">
 <div className="row">
