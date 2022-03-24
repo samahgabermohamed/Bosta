@@ -26,6 +26,7 @@ function App() {
     >
       <BrowserRouter>
         <Nav />
+        <Tracklist />
         <div>
           <Switch>
             {/* <Route path="/" exact component={Home} />

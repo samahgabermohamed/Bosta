@@ -113,27 +113,7 @@ return (
 
 <div className="container-sm">
 <div className="row">
-  <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title text-lg-end">عنوان التسليم</h5>
-      <p className="card-text mb-5 text-lg-end">cairo ...امبابة شارع طلعت حرب مدينة العمال بجوارالبرنس منزل 17 بلوك 33</p>
-      <p className="card-text mb-5 text-lg-end">هل توجد مشكلة في شحنتك </p>
-        <button   className="btn-outline-light mb-5 butt">
-            <NavLink className="nav nav-link active " exact to={"/tracklist"}>
-            ابلاغ عن مشكلة
-            </NavLink>
-        
-          </button>
-          <img
-          src="https://media.istockphoto.com/photos/negative-feedback-and-rate-with-bad-smile-face-picture-id1306118503?k=20&m=1306118503&s=612x612&w=0&h=Ne9zXuxLD3oQsbRLQtdm-wSl_dUhO7RrkyHda-fI6CM="
-          alt="img"
-          className="log  ms-5"
-          style={{ width: "8rem" }}
-        />
-      </div>
-    </div>
-  </div>
+ 
   <div className="col-sm-6">
     <div className="card">
       <div className="card-body">
@@ -174,6 +154,27 @@ return (
     </tbody>
   </Table>
 </div>
+      </div>
+    </div>
+  </div>
+  <div className="col-sm-6">
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title text-lg-end">عنوان التسليم</h5>
+      <p className="card-text mb-5 text-lg-end">cairo ...امبابة شارع طلعت حرب مدينة العمال بجوارالبرنس منزل 17 بلوك 33</p>
+      <p className="card-text mb-5 text-lg-end">هل توجد مشكلة في شحنتك </p>
+        <button   className="btn-outline-light mb-5 butt">
+            <NavLink className="nav nav-link active " exact to={"/tracklist"}>
+            ابلاغ عن مشكلة
+            </NavLink>
+        
+          </button>
+          <img
+          src="https://media.istockphoto.com/photos/negative-feedback-and-rate-with-bad-smile-face-picture-id1306118503?k=20&m=1306118503&s=612x612&w=0&h=Ne9zXuxLD3oQsbRLQtdm-wSl_dUhO7RrkyHda-fI6CM="
+          alt="img"
+          className="log  ms-5"
+          style={{ width: "8rem" }}
+        />
       </div>
     </div>
   </div>
