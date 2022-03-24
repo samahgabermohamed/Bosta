@@ -5,14 +5,69 @@ export default function Trackdetails (props) {
   return (
           <div className="card col-md-3 m-3 col-sm-12">
             <div className="card-body">
-              <h5 className="card-timestamp">{props.timestamp}</h5>
-              <p className="card-text" > {props.state}</p>
-              <p className="card-text" > {props.PromisedDate}</p>
-
+              <h1>fghghghghg</h1>
+              {/* <h5 className="card-timestamp">{props.timestamp}</h5>
+              <p className="card-text" > {props.state}</p> */}
+              <p className="card-text" > {props.CurrentStatus}</p>
+              {/* <p className="card-text" > {props.CreateDate}</p>
+              <p className="card-text" > {props.SupportPhoneNumbers}</p>
+              <p className="card-text" > {props.trackNumber}</p>
+              <p className="card-text" > {props. TrackingURL}</p>
+              <p className="card-text" > {props.TransitEvents}</p> */}
+              
             </div>
           </div>
         );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+
+// export default function Trackdetails (props) {
+
+//   return (
+//           <div className="card col-md-3 m-3 col-sm-12">
+//             <div className="card-body">
+//               {/* <h5 className="card-timestamp">{props.timestamp}</h5>
+//               <p className="card-text" > {props.state}</p> */}
+//               <p className="card-text" > {props.CurrentStatus}</p>
+//               {/* <p className="card-text" > {props.CreateDate}</p>
+//               <p className="card-text" > {props.SupportPhoneNumbers}</p>
+//               <p className="card-text" > {props.trackNumber}</p>
+//               <p className="card-text" > {props. TrackingURL}</p>
+//               <p className="card-text" > {props.TransitEvents}</p> */}
+              
+//             </div>
+//           </div>
+//         );
+// }
 
 
 
@@ -51,4 +106,4 @@ export default function Trackdetails (props) {
 //       <h3>PromisedDate : {details.PromisedDate}</h3>
 //     </div>
 //   );
-// }
+// } 
