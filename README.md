@@ -1,3 +1,5 @@
+![bosta-img](https://user-images.githubusercontent.com/66526898/170053474-28d23126-de8e-4bd9-9cc7-09a0f323ced8.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
